@@ -10,10 +10,10 @@ FlowRouter.route('/', {
   name: 'frontend.home',
   action() {
     asyncLoader([
-      importDefault(import('/client/imports/layouts/ErrorLayout'), 'ErrorLayout'),
+      importDefault(import('/client/imports/layouts/AbstractLayout'), 'AbstractLayout'),
       importDefault(import('/modules/frontend/client/imports/components/Home'), 'HomeComponent')
-    ]).then(({ ErrorLayout, HomeComponent }) => {
-      mountLayout(ErrorLayout, {
+    ]).then(({ AbstractLayout, HomeComponent }) => {
+      mountLayout(AbstractLayout, {
         title: 'frontend.home.title',
         content: HomeComponent
       });
